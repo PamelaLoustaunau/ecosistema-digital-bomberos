@@ -1,0 +1,12 @@
+# Ignorar dependencias de Node
+**/node_modules/
+node_modules/
+
+# Ignorar archivos de sistema y entorno
+.DS_Store
+.env
+*.log
+
+# Ignorar carpetas de compilación
+frontend/dist/
+backend/dist/

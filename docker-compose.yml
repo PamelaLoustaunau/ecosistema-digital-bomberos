@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: bombero_db_compose
+    environment:
+      POSTGRES_DB: bombero # Nombre de tu base de datos (puedes cambiarlo)
+      POSTGRES_USER: pame             # Usuario de la base de datos (puedes cambiarlo)
+      POSTGRES_PASSWORD: Bomberos2025! # Contraseña del usuario (CAMBIA ESTO)
+    ports:
+      - "5432:5432" # Mapea puerto de tu máquina:puerto del contenedor
+    volumes:
+      - db_data:/var/lib/postgresql/data # Persistencia de datos
+
+volumes:
+  db_data: # Define el volumen para persistir los datos de la DB
+
